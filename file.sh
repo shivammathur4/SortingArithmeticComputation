@@ -27,3 +27,8 @@ do
 	done
 done
 echo "Array in Ascending Order " ${arr[@]};
+for(( i=${#arr[@]}-1;i>=0;i-- ))
+do
+	rev="$rev ${arr[i]}";
+done
+echo "Array in Descending Order " $rev;
