@@ -6,5 +6,7 @@ read -p "Enter third value " c;
 
 r1=$(( a+b*c ))
 r2=$(( a*b+c ))
+r3=$(( c+a/b ))
 
-echo $r1 $r2
+echo $r1 $r2 $r3
+
