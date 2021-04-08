@@ -11,5 +11,6 @@ dict[r4]=$(( ($a % $b) + $c ));
 
 echo ${dict[r1]} ${dict[r2]} ${dict[r3]} ${dict[r4]}
 
-
+arr=( ${dict[@]} );
+echo "Array before sorting " ${arr[@]};
 
