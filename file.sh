@@ -14,3 +14,16 @@ echo ${dict[r1]} ${dict[r2]} ${dict[r3]} ${dict[r4]}
 arr=( ${dict[@]} );
 echo "Array before sorting " ${arr[@]};
 
+for(( i=0;i<${#arr[@]};i++ ))
+do
+	for(( j=0;j<${#arr[@]}-$i-1;j++ ))
+	do
+		if [[ ${arr[j]} -gt ${arr[$(($j+1))]} ]]
+		then
+			temp=${arr[j]};
+			arr[$j]=${arr[$(($j+1))]};
+			arr[$(($j+1))]=$temp;
+		fi
+	done
+done
+echo "Array in Ascending Order " ${arr[@]};
